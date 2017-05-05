@@ -1,7 +1,9 @@
 import React from 'react';
 
 const inputField = () => {
-    return <div>inputfield</div>;
+    return (
+        <input className="userInput" />
+    );
 };
 
 export default inputField;
