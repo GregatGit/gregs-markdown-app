@@ -6,11 +6,15 @@ class Output extends Component {
         
     }
     render() {
-        let myData = this.props.data;
+        let myData = this.changeData(this.props.data);
         return (
             <div>{myData}</div>
         );
     }
+    changeData(data){
+        return data.toUpperCase();
+    }
+
 }
 
 export default Output;
