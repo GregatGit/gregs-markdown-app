@@ -3,11 +3,12 @@ import React, { Component } from 'react';
 class Output extends Component {
     constructor(props){
         super(props);
-        this.state = {data: 'testing'};
+        
     }
     render() {
+        let myData = this.props.data;
         return (
-            <div>{this.props.data}</div>
+            <div>{myData}</div>
         );
     }
 }
