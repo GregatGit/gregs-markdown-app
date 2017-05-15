@@ -31,7 +31,7 @@ class App extends Component {
           and save to reload.
         </p>
         <InputField onAddedInput={this.inputChangesOutput.bind(this)}/>
-        <Output/>
+        <Output data={ this.state.output}/>
       </div>
     );
   }

@@ -7,7 +7,7 @@ class Output extends Component {
     }
     render() {
         return (
-            <div>{this.state.data}</div>
+            <div>{this.props.data}</div>
         );
     }
 }
