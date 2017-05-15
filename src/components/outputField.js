@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import marked from 'marked';
 
 class Output extends Component {
     constructor(props){
@@ -12,7 +13,8 @@ class Output extends Component {
         );
     }
     changeData(data){
-        return data.toUpperCase();
+        data =  marked(data);
+        return data;
     }
 
 }
