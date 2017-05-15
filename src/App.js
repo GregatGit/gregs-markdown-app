@@ -30,7 +30,7 @@ class App extends Component {
           <code>src/App.js</code>
           and save to reload.
         </p>
-        <InputField onAddedInput={this.inputChangesOutput}/>
+        <InputField onAddedInput={this.inputChangesOutput.bind(this)}/>
         <Output/>
       </div>
     );

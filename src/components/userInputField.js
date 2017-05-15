@@ -6,11 +6,6 @@ class InputField extends Component {
         this.state = {data: ''};
     }
 
-    onInputChanged(plainText){
-        //this.setState({data: plainText});
-        this.props.onInputChanged(plainText);
-    }
-
     render(){
         return (
             <input value={this.state.data} className="userInput" 
@@ -22,24 +17,14 @@ class InputField extends Component {
             />
         );
     }
+    onInputChanged(plainText){
+        //this.setState({data: plainText});
+        //this.props.onInputChanged(plainText);
+        this.props.onAddedInput(plainText);
+    }
+    
 };
 
 export default InputField;
 
-/*
-    render() {
-        return (
-            <div className="search-bar">
-                <input 
-                value={this.state.term}
-                onChange={event => this.onInputChange(event.target.value)} />
-            </div>
-        );
-    }
-
-    onInputChange(term) {
-        this.setState(({term}));
-        this.props.onSearchTermChange(term);
-    }
-}
- */
+//this.inputChangesOutput.bind(this);
