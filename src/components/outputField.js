@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
-
+import marked from 'marked';
+marked.setOptions({
+    gfm: true,
+    sanitize: true
+}); 
 
 class Output extends Component {
     constructor(props){
@@ -7,12 +11,16 @@ class Output extends Component {
         
     }
     render() {
-        let myData = this.props.data;
+        let myData = marked(this.props.data);
         return (
-            <div>{myData}</div>
+           
+            <div  dangerouslySetInnerHTML={{ __html: myData }}></div>
         );
     }
-    
+    changeData(data){
+        let myData = marked(data, {sanitize: true});
+      return { __html: myData }
+    }
 
 }
 

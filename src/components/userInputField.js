@@ -8,7 +8,7 @@ class InputField extends Component {
 
     render(){
         return (
-            <input value={this.state.data} className="userInput" 
+            <textarea value={this.state.data} className="userInput" 
             onChange={(event) => {
                 let data = event.target.value;
                 this.setState({data });
