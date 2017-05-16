@@ -12,16 +12,10 @@ class Output extends Component {
     }
     render() {
         let myData = marked(this.props.data);
-        return (
-           
+        return (       
             <div  dangerouslySetInnerHTML={{ __html: myData }}></div>
         );
     }
-    changeData(data){
-        let myData = marked(data, {sanitize: true});
-      return { __html: myData }
-    }
-
 }
 
 export default Output;
