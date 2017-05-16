@@ -5,17 +5,10 @@ marked.setOptions({
     sanitize: true
 }); 
 
-class Output extends Component {
-    constructor(props){
-        super(props);
-        
-    }
-    render() {
-        let myData = marked(this.props.data);
-        return (       
-            <div  dangerouslySetInnerHTML={{ __html: myData }}></div>
-        );
-    }
+const Output = (props) => {
+    let myData = marked(props.data); 
+    return (
+        <div  dangerouslySetInnerHTML={{ __html: myData }}></div>
+    )
 }
-
 export default Output;
