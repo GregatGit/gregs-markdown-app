@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import marked from 'marked';
+import React from 'react'
+import marked from 'marked'
 marked.setOptions({
-    gfm: true,
-    sanitize: true
-}); 
+  gfm: true,
+  sanitize: true
+})
 
 const Output = (props) => {
-    let myData = marked(props.data); 
-    return (
-        <div  dangerouslySetInnerHTML={{ __html: myData }}></div>
-    )
+  let myData = marked(props.data)
+  return (
+    <div dangerouslySetInnerHTML={{ __html: myData }} />
+  )
 }
-export default Output;
+export default Output
