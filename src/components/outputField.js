@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import marked from 'marked';
+
 
 class Output extends Component {
     constructor(props){
@@ -7,15 +7,12 @@ class Output extends Component {
         
     }
     render() {
-        let myData = this.changeData(this.props.data);
+        let myData = this.props.data;
         return (
             <div>{myData}</div>
         );
     }
-    changeData(data){
-        data =  marked(data);
-        return data;
-    }
+    
 
 }
 
