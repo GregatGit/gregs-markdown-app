@@ -2,6 +2,7 @@
   "name": "gregs-markdown-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://gregatgit.github.io/gregs-markdown-app/",
   "dependencies": {
     "marked": "^0.3.6",
     "react": "^15.5.4",
@@ -12,6 +13,8 @@
     "standard": "^10.0.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

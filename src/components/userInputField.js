@@ -19,7 +19,6 @@ class InputField extends Component {
         let data = event.target.value
         this.setState({data})
         this.onInputChanged(data)
-        console.log(this.state.data)
       }} />)
   }
   onInputChanged (plainText) {
