@@ -6,6 +6,10 @@ class InputField extends Component {
       data: ''
     }
   }
+  componentDidMount () {
+    this.setState({data: this.props.startTerm})
+
+  }
 
   render () {
     return (<textarea
@@ -19,7 +23,6 @@ class InputField extends Component {
       }} />)
   }
   onInputChanged (plainText) {
-        // this.setState({data: plainText}); this.props.onInputChanged(plainText);
     this
             .props
             .onAddedInput(plainText)

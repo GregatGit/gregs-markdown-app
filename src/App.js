@@ -3,16 +3,24 @@ import logo from './logo.svg'
 import './App.css'
 import InputField from './components/userInputField'
 import Output from './components/outputField'
+let startTerm = `Hello
+====
+practice
+---
+## your
+markdown!`
 
 class App extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      input: '',
+      input: startTerm,
       output: ''
     }
   }
-
+  componentDidMount () {
+    this.inputChangesOutput(startTerm)
+  }
   inputChangesOutput (term) {
     this.setState({input: term, output: term})
   }
@@ -22,14 +30,15 @@ class App extends Component {
       <div className='App'>
         <div className='App-header'>
           <img src={logo} className='App-logo' alt='logo' />
-          <h2>Welcome to React</h2>
+          <h2>Markdown Previewer</h2>
+          <p>by Greg Duncan</p>
         </div>
         <p className='App-intro'>
-          To get started, edit
-          <code>src/App.js</code>
-          and save to reload.
+          Type markdown in the left box
         </p>
-        <InputField onAddedInput={this.inputChangesOutput.bind(this)} />
+        <InputField 
+          onAddedInput={this.inputChangesOutput.bind(this)}
+          startTerm={startTerm} />
         <Output data={this.state.output} />
       </div>
     )
