@@ -1,14 +1,9 @@
 import React, {Component} from 'react'
 import logo from './logo.svg'
 import './App.css'
-import InputField from './components/userInputField'
-import Output from './components/outputField'
-let startTerm = `Hello
-====
-practice
----
-## your
-markdown!`
+import InputField from './components/InputField'
+import Output from './components/OutputField'
+import { startTerm } from './data'
 
 class App extends Component {
   constructor (props) {
