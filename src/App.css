@@ -29,3 +29,12 @@
   float: left;
   margin-left: 5%;
 }
+
+.outputField{
+  width: 50%;
+  text-align: left
+}
+
+.outputField h1, h2 {
+  text-align: center;
+}
