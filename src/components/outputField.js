@@ -8,7 +8,7 @@ marked.setOptions({
 const Output = (props) => {
   let myData = marked(props.data)
   return (
-    <div dangerouslySetInnerHTML={{ __html: myData }} />
+    <div className="outputField" id="preview" dangerouslySetInnerHTML={{ __html: myData }} />
   )
 }
 export default Output
